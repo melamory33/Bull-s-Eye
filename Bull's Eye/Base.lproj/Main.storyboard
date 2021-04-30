@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="landscape" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Bull_s_Eye" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="1" maxValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="oVS-U5-Cp0">
+                                <rect key="frame" x="129" y="218" width="638" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="WOo-mZ-1DD"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="sliderChange:" destination="BYZ-38-t0r" eventType="valueChanged" id="ahP-1b-zdD"/>
+                                </connections>
+                            </slider>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Put the Bull's Eye as close as you can to: 100" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2SC-DL-J26">
+                                <rect key="frame" x="272" y="51" width="378" height="28"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Htd-ve-dqy">
+                                <rect key="frame" x="106" y="221" width="9" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="100" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s6U-hJ-zxG">
+                                <rect key="frame" x="773" y="219" width="33" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="70R-Dd-DQx">
+                                <rect key="frame" x="75" y="356" width="71" height="30"/>
+                                <state key="normal" title="Start Over"/>
+                                <connections>
+                                    <action selector="startNewGame" destination="BYZ-38-t0r" eventType="touchUpInside" id="Yqw-EP-QsG"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score: 0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z1K-eh-ApE">
+                                <rect key="frame" x="272" y="360.5" width="64" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Round: 0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F87-5D-MKL">
+                                <rect key="frame" x="517" y="360.5" width="69" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="infoLight" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jrL-bF-Y9i">
+                                <rect key="frame" x="799" y="359" width="25" height="24"/>
+                                <connections>
+                                    <action selector="showInfoAlert" destination="BYZ-38-t0r" eventType="touchUpInside" id="zcl-XY-bAY"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xXw-Tc-mRY">
+                                <rect key="frame" x="398.5" y="277" width="99" height="52"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="52" id="UzB-eh-mTs"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                <state key="normal" title="Hit me!">
+                                    <color key="titleShadowColor" systemColor="secondaryLabelColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="showAlert" destination="BYZ-38-t0r" eventType="touchUpInside" id="7tT-db-F5z"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="jrL-bF-Y9i" secondAttribute="trailing" constant="28" id="39T-cS-gzs"/>
+                            <constraint firstItem="z1K-eh-ApE" firstAttribute="centerY" secondItem="F87-5D-MKL" secondAttribute="centerY" id="5ly-bY-dUT"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="70R-Dd-DQx" secondAttribute="bottom" constant="7" id="7I2-3o-ZWb"/>
+                            <constraint firstItem="F87-5D-MKL" firstAttribute="leading" secondItem="z1K-eh-ApE" secondAttribute="trailing" constant="181" id="DmA-lU-umE"/>
+                            <constraint firstItem="Htd-ve-dqy" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="62" id="FXZ-uA-lcm"/>
+                            <constraint firstItem="oVS-U5-Cp0" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="IhH-Y4-yXB"/>
+                            <constraint firstItem="s6U-hJ-zxG" firstAttribute="leading" secondItem="oVS-U5-Cp0" secondAttribute="trailing" constant="8" symbolic="YES" id="J2a-b5-Ivm"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="xXw-Tc-mRY" secondAttribute="bottom" constant="64" id="K7W-ZR-0Ct"/>
+                            <constraint firstItem="s6U-hJ-zxG" firstAttribute="centerY" secondItem="oVS-U5-Cp0" secondAttribute="centerY" id="Kjs-Z1-Adg"/>
+                            <constraint firstItem="2SC-DL-J26" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="51" id="NEY-d5-e3c"/>
+                            <constraint firstItem="Htd-ve-dqy" firstAttribute="trailing" secondItem="oVS-U5-Cp0" secondAttribute="trailing" id="NSv-bG-Day"/>
+                            <constraint firstItem="Htd-ve-dqy" firstAttribute="centerY" secondItem="oVS-U5-Cp0" secondAttribute="centerY" id="Qdj-7X-HCW"/>
+                            <constraint firstItem="xXw-Tc-mRY" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="YKF-nN-khj"/>
+                            <constraint firstItem="z1K-eh-ApE" firstAttribute="leading" secondItem="70R-Dd-DQx" secondAttribute="trailing" constant="126" id="d29-8m-SPM"/>
+                            <constraint firstItem="jrL-bF-Y9i" firstAttribute="leading" relation="lessThanOrEqual" secondItem="F87-5D-MKL" secondAttribute="trailing" constant="213" id="eK5-J7-hhj"/>
+                            <constraint firstItem="oVS-U5-Cp0" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="87" id="fe7-4L-1wj"/>
+                            <constraint firstItem="70R-Dd-DQx" firstAttribute="centerY" secondItem="z1K-eh-ApE" secondAttribute="centerY" id="fsI-bB-8rT"/>
+                            <constraint firstItem="2SC-DL-J26" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="gUa-hb-vll"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="oVS-U5-Cp0" secondAttribute="trailing" constant="87" id="hpD-3R-7eW"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="oVS-U5-Cp0" secondAttribute="bottom" constant="145" id="m2y-b2-fxG"/>
+                            <constraint firstItem="70R-Dd-DQx" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="31" id="pLe-yH-MB5"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="s6U-hJ-zxG" secondAttribute="trailing" constant="46" id="tnb-bd-Kp9"/>
+                            <constraint firstItem="F87-5D-MKL" firstAttribute="centerY" secondItem="jrL-bF-Y9i" secondAttribute="centerY" id="v2C-qz-P7Y"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="hitButton" destination="xXw-Tc-mRY" id="wbL-57-WBg"/>
+                        <outlet property="infoButton" destination="jrL-bF-Y9i" id="edL-TZ-1JA"/>
+                        <outlet property="roundLabel" destination="F87-5D-MKL" id="JlE-qT-tiR"/>
+                        <outlet property="scoreLabel" destination="z1K-eh-ApE" id="g3m-a0-gac"/>
+                        <outlet property="slider" destination="oVS-U5-Cp0" id="kKj-hd-aZp"/>
+                        <outlet property="startOverButton" destination="70R-Dd-DQx" id="gOg-Az-wZu"/>
+                        <outlet property="taskLabel" destination="2SC-DL-J26" id="5nl-KL-9dc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-295.3125" y="57.971014492753625"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="secondaryLabelColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
